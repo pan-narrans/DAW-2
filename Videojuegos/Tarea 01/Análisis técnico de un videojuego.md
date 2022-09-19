@@ -1,15 +1,23 @@
-# Videojuego
+# Análisis de un Videojuego
 
-1. bitburner
-2. cookie clicker
-3. baba is you
-4. satisfactory
-5. banished
-6. dorfromantik
-7. Mini Metro
-8. The Stanley Parable
-
-![header image](img/header.jpg)
+- [Análisis de un Videojuego](#análisis-de-un-videojuego)
+  - [Enunciado](#enunciado)
+  - [Mini Metro](#mini-metro)
+    - [Gameplay](#gameplay)
+    - [Sistema de juego](#sistema-de-juego)
+      - [Líneas de metro](#líneas-de-metro)
+      - [Locomotoras y vagones](#locomotoras-y-vagones)
+      - [Estaciones](#estaciones)
+      - [Tiempo](#tiempo)
+      - [Game Over](#game-over)
+    - [Cámara e iluminación](#cámara-e-iluminación)
+    - [HUD](#hud)
+    - [Assets Gráficos](#assets-gráficos)
+    - [Sonido](#sonido)
+  - [Baba is you](#baba-is-you)
+    - [Gameplay](#gameplay-1)
+    - [Historia](#historia)
+  - [Conclusión](#conclusión)
 
 ## Enunciado
 
@@ -21,14 +29,167 @@ No es necesario que el análisis sea extremadamente exhaustivo.
 
 La tarea se deberá entregar en un documento en formato PDF.
 
-## Gameplay
+## Mini Metro
 
-![gameplay image](img/gameplay.jpg)
+![header image](img/header.jpg)
 
-En este juego conectas estaciones de metro () para que los pasajeros que hay en ellas puedan llegar a su destino.
+En este juego conectas estaciones de metro para que los pasajeros que hay en ellas puedan llegar a su destino.
 
 El objetivo del juego es evitar que estas estacione se saturen de pasajeros.
 
-## Cámara
+No hay mejor forma de entender cómo funciona un juego que viéndolo en acción, por eso dejo aquí enlazado el [trailer](https://www.youtube.com/watch?v=WJHKzzPtDDI) y una muestra de [gameplay](https://www.youtube.com/watch?v=MMmxDwy5cRA), no hace falta ver los vídeos ni verlos enteros, pero echarles un vistazo por encima puede ayudar a entender lo que viene ahora.
 
-Vista cenital para poder ver en todo momento la totalidad del campo de juego.
+### Gameplay
+
+![gameplay image](img/gameplay.jpg)
+
+El juego empieza con tres estaciones de metro distintas, representadas por las formas geométricas blancas, que se empiezan a llenar de pasajeros, las formas pequeñas negras que se ven encima de las estaciones.
+
+El jugador dispone de tres líneas de metro y tres locomotoras para interconectar las estaciones y conseguir que cada pasajero llegue a la estación deseada.
+
+Si una estación se satura de pasajeros saldrá un aviso y un círculo de carga empezará a llenarse sobre la estación. Si este círculo se completa, la estación colapsa y se acaba la partida.
+
+El objetivo es aguantar el mayor tiempo posible sin colapsos en las estaciones. No existe condición de victoria.
+
+### Sistema de juego
+
+#### Líneas de metro
+
+El jugador puede conectar estaciones con las líneas de metro que tenga disponibles. Las líneas pueden cruzarse y puede haber varias líneas por estación. Para cruzar cuerpos de agua hacen falta puentes o túneles.
+
+Una línea de metro puede ser circular.
+
+El jugador puede modificar en juego el trazado de la línea de metro sin penalización alguna. Los trenes en trayecto afectados completarán el trayecto actual y se re-colocarán automáticamente.
+
+Una línea de metro puede ser eliminada. Los trenes en trayecto lo acabarán depositarán todos sus viajeros en la siguiente estación y se guardarán.
+
+#### Locomotoras y vagones
+
+Un total de cuatro locomotoras pueden recorrer la misma línea de metro. Las locomotoras pueden recorrer la línea en cualquier dirección.
+
+Una locomotora tiene espacio para 6 pasajeros. Cada vagón conectado a una locomotora permite viajar a otros 6 pasajeros.
+
+#### Estaciones
+
+A lo largo de la partida irán apareciendo nuevas estaciones simples y algunas estaciones únicas.
+
+Las estaciones simples son:
+
+- círculo
+- cuadrado
+- triángulo
+
+Y las estaciones especiales son cualquier otra forma geométrica.
+
+Los viajeros pueden hacer transbordo en una estación si así lo necesitan para llegar a su destino.
+
+#### Tiempo
+
+El juego puede acelerarse para que el tiempo transcurra más rápido y pausarse. Con el juego pausado se pueden re-colocar trenes y línea de metro.
+
+Cada vez que el jugador complete una semana de juego, los días van pasando poco a poco, será recompensado con una locomotora y:
+
+- Una nueva línea de metro.
+- Dos vagones que aumentan la capacidad de viajeros de la locomotora que los remolca.
+- Dos túneles o puentes.
+- Un intercambiador que aumenta la capacidad de viajeros y reduce el tiempo de saturación de la estación sobre la cual sea colocado.
+- Recompensa especial según el mapa jugado.
+
+Se le dará a elegir al jugador entre dos opciones aleatorias.
+
+![Recompensas](img/items.jpg)
+
+#### Game Over
+
+La partida acaba cuando una estación se satura.
+
+### Cámara e iluminación
+
+Vista cenital ortográfica para poder ver en todo momento la totalidad del campo de juego sin distorsiones. La iluminación es plana, sin sombras.
+
+### HUD
+
+En la parte superior de la pantalla de juego aparecen en orden:
+
+- Una flecha para volver al menú de selección de mapa.
+- El número total de pasajeros transportados durante la partida.
+- El día actual de la semana y el control de la velocidad del juego *(tras pinchar sobre el día de la semana)*.
+
+![HUD superior.](img/HUD_top.jpg)
+
+En la parte inferior se ven en orden:
+
+- El número disponible de locomotoras y vagones. Las locomotoras y vagones en uso *(dentro del tablón de juego)* no cuentan como libres.
+- Las líneas de metro desbloqueadas.
+- El número de puentes o túneles disponibles, dependiendo del mapa. Igual que con las locomotoras, los puentes o túneles en uso no cuentan como disponibles.
+
+![HUD inferior.](img/HUD_bottom.jpg)
+
+### Assets Gráficos
+
+Todo el apartado gráfico de este juego, desde los menús hasta la pantalla de juego, es increíblemente simple y minimalista. Todo son formas geométricas sencillas y colores planos. Más que el arte de un videojuego parece un trabajo de diseño gráfico.
+
+Esta simplicidad permite centrarse más en el gameplay y evita distracciones innecesarias.
+
+### Sonido
+
+El apartado sonoro, al igual que el gráfico, es minimalista. Consta de:
+
+- Una música de fondo poco intrusiva.
+- Unos pocos efectos de sonido a la hora de interactuar con el juego.
+- Finalmente un aviso o alerta cuando una estación se encuentra cerca del colapso.
+
+## Baba is you
+
+No voy a realizar un análisis como tal de este juego, ya he analizado los componentes del Mini Metro, pero igualmente me apetecía mencionarlo por lo curioso que es.
+
+![header image](img/header_baba.jpg)
+
+Dejo aquí un link al [trailer](https://cdn.akamai.steamstatic.com/steam/apps/256743354/movie480.webm?t=1550681204) y a un [gameplay](https://www.youtube.com/watch?v=dAiX8s-Eu7w) que muestra muy bien los principios del juego.
+
+Baba is You es en esencia, un juego de puzzles. Las normas del juego están dictadas por los enunciados formados con los bloques que se encuentran en la pantalla.
+
+### Gameplay
+
+![gameplay image 1](img/baba_1.jpg)
+
+En esta pantalla podemos ver por ejemplo que:
+
+- Baba *(el conejito)* eres tú *(el jugador o la jugadora)*.
+- La llave es abrir.
+- El muro y la puerta son parar y cerrar.
+
+Esto se interpreta así:
+
+- Las acciones del jugador o jugadora controlan a Baba.
+- La llave permite abrir cosas cerradas.
+- El muro y la puerta impiden el paso.
+- El muro y la puerta están cerrados y por lo tanto se pueden abrir.
+
+Si movemos estos bloques al empujarlos podemos cambiar estas normas.
+
+### Historia
+
+Baba nació como tantos otros juegos indies, como idea loca en una game jam cuyo tema era *"Not There"*. El juego ganó en primer puesto en la game jam y se hizo muy popular en varios festivales indie. Arvi Teikari, su creador, decidió seguir con el desarrollo.
+
+Para el juego final creó una pequeña historia para acompañar a los puzzles, decenas de mapas repartidos en varios mundos y realmente no tengo ni idea de cómo está programado todo esto por debajo, pero tiene que ser una locura muy interesante.
+
+## Conclusión
+
+He escogido estos dos pequeños juegos con la intención de mostrar que no todo tiene por que ser creado por un estudio AAA y un equipo de 300 personas. No todo son necesariamente tiros y guerras, ni abusos de poder o muestras de violencia. Hay muchos juegos que son simplemente pequeñas joyas que entretienen o se permiten el explorar otros mundos y conceptos.
+
+El objetivo de los juegos es al fin y al cabo el de educar y entretener.
+
+Para acabar simplemente quiero mencionar otros ejemplos de juegos que considero se salen de la norma de lo que mucha gente se imaginaría como *videojuegos*.
+
+**Cloud Gardens**: ayudar a la naturaleza a reclamar paisajes post-apocalípticos plantando plantas y guiando su crecimiento.
+
+[![Cloud Gardens](img/header_gardens.jpg)](https://store.steampowered.com/app/1372320/Cloud_Gardens/)
+
+**DorfRomantik**: rellenar un tablero colocando piezas de terreno e intentando que conecten lo mejor posible entre ellas.
+
+[![DorfRomantik](img/header_dorfromantik.jpg)](https://store.steampowered.com/app/1455840/Dorfromantik/)
+
+**Banished**: toma el control de un grupo de desterrados y ayúdales a sobrevivir en un nuevo territorio. Este juego se centra en la gestión y supervivencia del grupo sin necesidad de introducir el conflicto con otras sociedades.
+
+[![banished](img/header_banished.jpg)](https://store.steampowered.com/app/242920/Banished/)
