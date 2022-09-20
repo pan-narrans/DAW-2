@@ -1,8 +1,13 @@
 # Análisis de un Videojuego
 
+``` cmd
+Tarea realizada por Alejandro Pérez.
+```
+
 - [Análisis de un Videojuego](#análisis-de-un-videojuego)
   - [Enunciado](#enunciado)
   - [Mini Metro](#mini-metro)
+    - [Orígenes](#orígenes)
     - [Gameplay](#gameplay)
     - [Sistema de juego](#sistema-de-juego)
       - [Líneas de metro](#líneas-de-metro)
@@ -18,6 +23,9 @@
     - [Gameplay](#gameplay-1)
     - [Historia](#historia)
   - [Conclusión](#conclusión)
+  - [Bibliografía](#bibliografía)
+
+![Tennis for two.](img/tennis_for_two.jpg)
 
 ## Enunciado
 
@@ -29,15 +37,21 @@ No es necesario que el análisis sea extremadamente exhaustivo.
 
 La tarea se deberá entregar en un documento en formato PDF.
 
-## Mini Metro
-
 ![header image](img/header.jpg)
+
+## Mini Metro
 
 En este juego conectas estaciones de metro para que los pasajeros que hay en ellas puedan llegar a su destino.
 
 El objetivo del juego es evitar que estas estacione se saturen de pasajeros.
 
 No hay mejor forma de entender cómo funciona un juego que viéndolo en acción, por eso dejo aquí enlazado el [trailer](https://www.youtube.com/watch?v=WJHKzzPtDDI) y una muestra de [gameplay](https://www.youtube.com/watch?v=MMmxDwy5cRA), no hace falta ver los vídeos ni verlos enteros, pero echarles un vistazo por encima puede ayudar a entender lo que viene ahora.
+
+### Orígenes
+
+Mini Metro nació como un juego de navegador en el año 2013. La versión final para ordenadores y jugable fuera de un navegador vió la luz en año 2015.
+
+Actualmente cuenta con versiones para PC, Mac, Linux, Switch y Ps4.
 
 ### Gameplay
 
@@ -136,7 +150,7 @@ Esta simplicidad permite centrarse más en el gameplay y evita distracciones inn
 El apartado sonoro, al igual que el gráfico, es minimalista. Consta de:
 
 - Una música de fondo poco intrusiva.
-- Unos pocos efectos de sonido a la hora de interactuar con el juego.
+- Unos pocos efectos de sonido a la hora de interactuar con el juego, por ejemplo al pinchar sobre una línea de metro, o cuando ocurre un evento.
 - Finalmente un aviso o alerta cuando una estación se encuentra cerca del colapso.
 
 ## Baba is you
@@ -193,3 +207,11 @@ Para acabar simplemente quiero mencionar otros ejemplos de juegos que considero 
 **Banished**: toma el control de un grupo de desterrados y ayúdales a sobrevivir en un nuevo territorio. Este juego se centra en la gestión y supervivencia del grupo sin necesidad de introducir el conflicto con otras sociedades.
 
 [![banished](img/header_banished.jpg)](https://store.steampowered.com/app/242920/Banished/)
+
+## Bibliografía
+
+Todas las capturas de pantallas han sido sacadas de la propia página de Steam del juego en cuestión o bien han sido tomadas por mi.
+
+Los vídeos están sacados de YouTube, toda la información relevante al vídeo se puede ver pinchando en el enlace del propio vídeo.
+
+Para las nociones usadas me he basado en los apuntes de clase para saber que se esperaba del análisis y en conocimientos que ya tenía traía yo de casa.
