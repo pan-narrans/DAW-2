@@ -24,6 +24,12 @@ Es necesario el SDK de Apple.
 
 ## ¿Hace falta un iPhone?
 
-Se puede desarrollar dentro de una máquina virtual corriendo una imagen del sistema operativo macOs.
+Técnicamente no. Se puede desarrollar dentro de una máquina virtual corriendo una imagen del sistema operativo macOs.
+
+Sin embargo, para desarrollar para Apple se recomienda tener hardware de Apple, tanto para programar como para realizar las pruebas.
 
 ## ¿Qué conocimientos previos hacen falta?
+
+- Conocimientos de programación mediante IDE, esto ayudará a familiarizarse más rápido con el IDE propio de mac.
+- Conocimientos de bases de datos.
+- Nociones de programación, no necesariamente de Swift.
