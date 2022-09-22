@@ -15,6 +15,7 @@ Tarea realizada por Alejandro Pérez.
       - [Estaciones](#estaciones)
       - [Tiempo](#tiempo)
       - [Game Over](#game-over)
+      - [Win Condition](#win-condition)
     - [Cámara e iluminación](#cámara-e-iluminación)
     - [HUD](#hud)
     - [Assets Gráficos](#assets-gráficos)
@@ -101,7 +102,7 @@ Los viajeros pueden hacer transbordo en una estación si así lo necesitan para 
 
 El juego puede acelerarse para que el tiempo transcurra más rápido y pausarse. Con el juego pausado se pueden re-colocar trenes y línea de metro.
 
-Cada vez que el jugador complete una semana de juego, los días van pasando poco a poco, será recompensado con una locomotora y:
+Cada vez que el jugador complete una semana de juego, los días van pasando poco a poco, será recompensado con una nueva locomotora y una de los siguientes opciones:
 
 - Una nueva línea de metro.
 - Dos vagones que aumentan la capacidad de viajeros de la locomotora que los remolca.
@@ -115,13 +116,19 @@ Se le dará a elegir al jugador entre dos opciones aleatorias.
 
 #### Game Over
 
-La partida acaba cuando una estación se satura.
+La partida acaba cuando una estación se satura de pasajeros.
+
+#### Win Condition
+
+No existe condición de victoria. El objetivo del juego es aguantar el mayor tiempo posible en partida y transportar el mayor número de pasajeros.
 
 ### Cámara e iluminación
 
 Vista cenital ortográfica para poder ver en todo momento la totalidad del campo de juego sin distorsiones. La iluminación es plana, sin sombras.
 
 ### HUD
+
+Vamos a ver por separado los elementos de la parte superior e inferior de la pantalla.
 
 En la parte superior de la pantalla de juego aparecen en orden:
 
@@ -143,6 +150,8 @@ En la parte inferior se ven en orden:
 
 Todo el apartado gráfico de este juego, desde los menús hasta la pantalla de juego, es increíblemente simple y minimalista. Todo son formas geométricas sencillas y colores planos. Más que el arte de un videojuego parece un trabajo de diseño gráfico.
 
+![Menú de selección de nivel.](img/mini-metro-level-selection.jpg)
+
 Esta simplicidad permite centrarse más en el gameplay y evita distracciones innecesarias.
 
 ### Sonido
@@ -153,17 +162,19 @@ El apartado sonoro, al igual que el gráfico, es minimalista. Consta de:
 - Unos pocos efectos de sonido a la hora de interactuar con el juego, por ejemplo al pinchar sobre una línea de metro, o cuando ocurre un evento.
 - Finalmente un aviso o alerta cuando una estación se encuentra cerca del colapso.
 
+![header image](img/header_baba.jpg)
+
 ## Baba is you
 
-No voy a realizar un análisis como tal de este juego, ya he analizado los componentes del Mini Metro, pero igualmente me apetecía mencionarlo por lo curioso que es.
-
-![header image](img/header_baba.jpg)
+No voy a realizar un análisis como tal de este juego, ya que ya he analizado los componentes del Mini Metro, pero igualmente me apetecía mencionarlo por lo curioso que es.
 
 Dejo aquí un link al [trailer](https://cdn.akamai.steamstatic.com/steam/apps/256743354/movie480.webm?t=1550681204) y a un [gameplay](https://www.youtube.com/watch?v=dAiX8s-Eu7w) que muestra muy bien los principios del juego.
 
 Baba is You es en esencia, un juego de puzzles. Las normas del juego están dictadas por los enunciados formados con los bloques que se encuentran en la pantalla.
 
 ### Gameplay
+
+Debajo podemos ver un ejemplo de pantalla de juego:
 
 ![gameplay image 1](img/baba_1.jpg)
 
@@ -190,23 +201,23 @@ Para el juego final creó una pequeña historia para acompañar a los puzzles, d
 
 ## Conclusión
 
-He escogido estos dos pequeños juegos con la intención de mostrar que no todo tiene por que ser creado por un estudio AAA y un equipo de 300 personas. No todo son necesariamente tiros y guerras, ni abusos de poder o muestras de violencia. Hay muchos juegos que son simplemente pequeñas joyas que entretienen o se permiten el explorar otros mundos y conceptos.
+He escogido estos dos pequeños juegos con la intención de mostrar que no todo tiene por que ser creado por un estudio AAA *(super-producción)* y un equipo de 300 personas. No todo son necesariamente tiros y guerras, ni abusos de poder o muestras de violencia. Hay muchos juegos que son simplemente pequeñas joyas que entretienen o se permiten el explorar otros mundos y conceptos.
 
 El objetivo de los juegos es al fin y al cabo el de educar y entretener.
 
-Para acabar simplemente quiero mencionar otros ejemplos de juegos que considero se salen de la norma de lo que mucha gente se imaginaría como *videojuegos*.
-
-**Cloud Gardens**: ayudar a la naturaleza a reclamar paisajes post-apocalípticos plantando plantas y guiando su crecimiento.
+Para acabar simplemente quiero mencionar otros ejemplos de juegos que considero se salen de la norma de lo que mucha gente se imaginaría como *videojuegos* ya sea porque estén al límite de siquiera ser juegos, porque parezcan más un juego de mesa o porque son ejemplos raros en su género.
 
 [![Cloud Gardens](img/header_gardens.jpg)](https://store.steampowered.com/app/1372320/Cloud_Gardens/)
 
-**DorfRomantik**: rellenar un tablero colocando piezas de terreno e intentando que conecten lo mejor posible entre ellas.
+**Cloud Gardens**: Ayudar a la naturaleza a reclamar paisajes post-apocalípticos plantando plantas y guiando su crecimiento. No contiene conflicto ni hay consecuencias por "perder la partida". El único objetivo del juego es relajarse y decorar con plantas el entorno.
 
 [![DorfRomantik](img/header_dorfromantik.jpg)](https://store.steampowered.com/app/1455840/Dorfromantik/)
 
-**Banished**: toma el control de un grupo de desterrados y ayúdales a sobrevivir en un nuevo territorio. Este juego se centra en la gestión y supervivencia del grupo sin necesidad de introducir el conflicto con otras sociedades.
+**DorfRomantik**: Rellenar un tablero colocando piezas de terreno e intentando que conecten lo mejor posible entre ellas.
 
 [![banished](img/header_banished.jpg)](https://store.steampowered.com/app/242920/Banished/)
+
+**Banished**: Toma las riendas de un grupo de desterrados y ayúdales a sobrevivir en un nuevo territorio. Este juego se centra en la gestión y supervivencia del grupo sin necesidad de introducir el conflicto con otras sociedades.
 
 ## Bibliografía
 
