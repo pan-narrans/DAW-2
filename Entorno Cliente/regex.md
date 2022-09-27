@@ -1,9 +1,12 @@
 # Regular Expressions
 
+Ver la documentación de Mozilla sobre [expresiones regulares](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) para más información.
+
 - [Regular Expressions](#regular-expressions)
   - [Assertions](#assertions)
     - [Boundaries](#boundaries)
     - [Lookahead and Lookbehind](#lookahead-and-lookbehind)
+  - [Groups](#groups)
   - [Quantifiers or counting occurrences](#quantifiers-or-counting-occurrences)
     - [Greedy or not greedy](#greedy-or-not-greedy)
   - [Character classes](#character-classes)
@@ -31,6 +34,8 @@ They are used to look for matches at the beginning or ending of the input. They 
 | `/^a/`      | Matches `a` at the **start** of the string. |
 | `/a$/`      | Matches `a` at the **end** of the string.   |
 
+They can be combined to match the start and end of a string. For example `/^test$/` will match "test" but not "test test".
+
 ### Lookahead and Lookbehind
 
 | Expressions |     |
@@ -39,6 +44,22 @@ They are used to look for matches at the beginning or ending of the input. They 
 | `/a(?!a)/`  |     |
 | `/a(?<=a)/` |     |
 | `/a(?<!a)/` |     |
+
+## Groups
+
+| Expressions      |                                           |
+| ---------------- | ----------------------------------------- |
+| `/(\d+)/`        | Matches a number and remembers the match. |
+| `/(?<Name>\d+)/` | Same as above but naming the group.       |
+
+A matching group can be used like this:
+
+```js
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/;
+let result = str.replace(fixRegex, "$3 $2 $1");
+console.log(result) // three two one
+```
 
 ## Quantifiers or counting occurrences
 
