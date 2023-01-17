@@ -12,35 +12,44 @@
   <link href="css/bootstrap.min.css"
         rel="stylesheet">
 
+  <style>
+    .sml {height: 050px;}
+    .med {height: 150px;}
+    .big {height: 300px;}
+  </style>
+
 </head>
 
-<body>
+<body class="min-vh-100 d-flex flex-column flex-nowrap justify-content-between ">
 
-  <header class="v-100 bg-success p-3"></header>
+  <header class="bg-success sml"></header>
 
   <main class="container-fluid">
     <div class="row">
-      <aside class="col bg-danger p-3 d-sm-block d-none"></aside>
-      <div class="col-sm-10 col">
+      <aside class="col bg-danger d-sm-block d-none"></aside>
+      
+      <div class="col-sm-10 col my-auto">
         <div class="container">
-          <header class="row v-100 bg-danger p-3"></header>
+          <header class="row">
+            <div class="col"><div class="m-2 bg-danger sml"></div></div>
+          </header>
 
-          <section class="row g-2">
-            <div class="col-sm col-12 bg-warning p-5 m-2"></div>
-            <div class="col-sm col-12 bg-warning p-5 m-2"></div>
+          <section class="row my-2">
+            <div class="col-12 col-sm-6"><div class="bg-warning m-2 big"></div></div>
+            <div class="col-12 col-sm-6"><div class="bg-warning m-2 big"></div></div>
           </section>
 
-          <section class="row">
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
-            <div class="col bg-primary p-3 m-2"></div>
+          <section class="row my-2">
+            <div class="col-6 col-sm-4 col-md-2"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-2"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-4"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-2"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-2"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-2"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-2"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-4"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-2"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
+            <div class="col-6 col-sm-4 col-md-2"><div class="bg-primary my-2 mx-0 mx-md-2 med"></div></div>
           </section>
         </div>
       </div>
@@ -48,7 +57,7 @@
 
   </main>
 
-  <footer class="v-100 bg-success p-3"></footer>
+  <footer class="mt-auto bg-success sml"></footer>
 
   <!-- BOOTSTRAP JS-->
   <script src="js/bootstrap.bundle.min.js"></script>
